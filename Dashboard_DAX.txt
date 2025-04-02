@@ -1,0 +1,65 @@
+
+# Used DAX code:
+
+// Total Sales Over Time:
+Total Sales Over Time = 
+CALCULATE(
+    SUMX(
+        'sales order_items', 
+        'sales order_items'[list_price] * 'sales order_items'[quantity] * (1 - 'sales order_items'[discount])
+    ),
+    'sales orders'[order_status] = 4
+)
+
+// DAX Formula for Total Sales by Category:
+Total Sales by Category = 
+SUMX(
+    'sales order_items', 
+    'sales order_items'[list_price] * 'sales order_items'[quantity] * (1 - 'sales order_items'[discount])
+)
+    
+// DAX Formula for Total Sales by Product:
+Total Sales by Product = 
+SUMX(
+    'sales order_items', 
+    'sales order_items'[list_price] * 'sales order_items'[quantity] * (1 - 'sales order_items'[discount])
+)
+    
+// DAX Formula for Full Name (use New Column, not New Measure, within Sales customers):
+Full Name = 'sales customers'[first_name] & " " & 'sales customers'[last_name]
+
+// DAX Formula for Total Sales $:
+Total Sales $ = 
+SUMX(
+    'sales order_items', 
+    ('sales order_items'[list_price] * 'sales order_items'[quantity]) * (1 - 'sales order_items'[discount])
+)
+
+// DAX Formula for Total Sales Quantity, with format showing full general number:
+Total Sales Quantity = FORMAT(SUM('sales order_items'[quantity]), "#")
+
+// DAX Formula for Year column:
+Year = YEAR('sales orders'[order_date])
+
+// DAX Formula for Month column:
+Month = FORMAT('sales orders'[order_date], "MMMM")
+
+// DAX Formula for MonthNumber column:
+MonthNumber = MONTH('sales orders'[order_date])  -- Ensures correct sorting
+
+// DAX Formula for Total Sales per Customer:
+Total Sales by Customer = 
+SUMX(
+    'sales order_items', 
+    ('sales order_items'[list_price] * 'sales order_items'[quantity]) * (1 - 'sales order_items'[discount])
+)
+
+// DAX Formula for completed order Total Revenue:
+CALCULATE(
+    SUMX(
+        'sales order_items',
+        'sales order_items'[list_price] * 'sales order_items'[quantity] * (1 - 'sales order_items'[discount])
+    ),
+'sales orders'[order_status] = 4,
+FORMAT('sales orders'[order_date], "YYYY-MM") = MonthYearKey
+)
