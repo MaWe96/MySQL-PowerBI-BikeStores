@@ -6,23 +6,21 @@ Using the BikeStores database to explore graphical data visualization.
 
 Focusing on key metrics: sales/revenue, production and customers.
 
-Built with SQL Server and Power BI
+Built with SQL Server and Power BI.
 
 ## Objectives
 
-Visualize sales/revenue trends over time
+Visualize sales/revenue trends over time.
 
-Analyze sales by product category
+Analyze sales by product category.
 
-Identify top 10 performing products
+Identify top 10 performing products.
 
-Highlight top 10 customers
+Highlight top 10 customers.
 
-Implement year/month filtering
+Implement year/month filtering.
 
-Include customer analysis section
-
-Include staff performance section
+Include customer analysis section.
 
 ## Results:
 ![image][BikeStores_Dashboard](https://github.com/user-attachments/assets/f78f456a-5d9d-4a4e-820e-8bdc1f1827c0)
