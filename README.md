@@ -25,7 +25,7 @@ Include customer analysis section.
 ## Results:
 ![image](https://raw.githubusercontent.com/MaWe96/MySQL-PowerBI-BikeStores/refs/heads/main/BikeStores_Dashboard.png)
 
-## BikeStores project workflow (detailed method):
+## Workflow
 
 1. Downloaded https://www.sqlservertutorial.net/getting-started/load-sample-database/.
 2. Reviewed and modified MS SQL Server files into functional MySQL script files.
