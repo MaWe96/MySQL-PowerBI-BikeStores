@@ -23,7 +23,7 @@ Implement year/month filtering.
 Include customer analysis section.
 
 ## Results:
-![image][BikeStores_Dashboard](https://github.com/user-attachments/assets/f78f456a-5d9d-4a4e-820e-8bdc1f1827c0)
+![image](https://raw.githubusercontent.com/MaWe96/MySQL-PowerBI-BikeStores/refs/heads/main/BikeStores_Dashboard.png)
 
 ## BikeStores project workflow (detailed method):
 
